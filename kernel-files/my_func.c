@@ -50,9 +50,9 @@ asmlinkage bool areBracketsBalanced(char *expr, int n)
 	// If closing bracket was next
 	// to open
 	if (i == 1)
-		return check(expr + 2, n - 2);
+		return areBracketsBalanced(expr + 2, n - 2);
 
 	// If closing bracket was somewhere
 	// in middle.
-	return check(expr + 1, i - 1) && check(expr + i + 1, n - i - 1);
+	return areBracketsBalanced(expr + 1, i - 1) && areBracketsBalanced(expr + i + 1, n - i - 1);
 }
