@@ -1,6 +1,7 @@
 #include <linux/kernel.h>
-#include <stdio.h> 
-#include <stdlib.h> 
+#include <linux/slab.h>
+// #include <stdio.h> 
+// #include <stdlib.h> 
 #define bool int 
 
 // structure of a stack node 
