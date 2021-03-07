@@ -1,4 +1,6 @@
+#include <linux/kernel.h>
 #define bool int
+
 char findClosing(char c)
 {
 	if (c == '(')
@@ -39,7 +41,7 @@ asmlinkage bool areBracketsBalanced(char *expr, int n)
 			count--;
 		}
 	}
-
+    printk("My func rip\n");
 	// If we did not find a closing
 	// bracket
 	if (i == n)
