@@ -4,10 +4,10 @@
 #include <unistd.h>
 int main()
 {
-    char exp[10] = "((5-3))[2]"; 
+    char exp[10] = "()"; 
 
     // Function call 
-    if (syscall(549,&exp[0])) 
+    if (syscall(549,&exp[0], 2)) 
         printf("Balanced \n"); 
     else
         printf("Not Balanced \n"); 
