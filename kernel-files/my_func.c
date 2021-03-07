@@ -12,7 +12,7 @@ char findClosing(char c)
 
 // function to check if parenthesis are
 // balanced.
-bool check(char *expr, int n)
+asmlinkage bool areBracketsBalanced(char *expr, int n)
 {
 	// Base cases
 	if (n == 0)
