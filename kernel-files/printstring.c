@@ -2,6 +2,8 @@
 #include <linux/linkage.h>
 #include <linux/syscalls.h>
 #include <linux/uaccess.h>
+#include <linux/slab.h>
+#define bool int 
 // structure of a stack node 
 struct sNode { 
 	char data; 
