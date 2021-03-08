@@ -42,7 +42,7 @@ SYSCALL_DEFINE2(printstring, char *, expr, int, n)
         printk("my_syscall_1 : %c\n", expr[i]);
     }
 
-	int i = 0; 
+	i = 0; 
 
 	// Declare an empty character stack 
 	struct sNode* stack = NULL; 
@@ -124,7 +124,7 @@ void push(struct sNode** top_ref, int new_data)
 		printk("Stack overflow n"); 
 		// getchar(); 
 		// exit(0); 
-        return 0;
+        // return 0;
 	} 
 
 	// put in the data 
