@@ -7,7 +7,7 @@ int main()
     char exp[10] = "()"; 
 
     // Function call 
-    if (syscall(549,&exp[0], 2)) 
+    if (syscall(333,&exp[0], 2)) 
         printf("Balanced \n"); 
     else
         printf("Not Balanced \n"); 
