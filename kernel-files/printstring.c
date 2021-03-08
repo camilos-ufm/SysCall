@@ -51,16 +51,16 @@ SYSCALL_DEFINE2(printstring, char *, expr, int, n)
 	// brackets 
 	while (i < n) 
 	{ 
-		// If the exp[i] is a starting bracket then push 
+		// If the expr[i] is a starting bracket then push 
 		// it 
-		if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[') 
-			push(&stack, exp[i]); 
+		if (expr[i] == '{' || expr[i] == '(' || expr[i] == '[') 
+			push(&stack, expr[i]); 
 
-		// If exp[i] is an ending bracket then pop from 
+		// If expr[i] is an ending bracket then pop from 
 		// stack and check if the popped bracket is a 
 		// matching pair*/ 
-		if (exp[i] == '}' || exp[i] == ')'
-			|| exp[i] == ']') { 
+		if (expr[i] == '}' || expr[i] == ')'
+			|| expr[i] == ']') { 
 
 			// If we see an ending bracket without a pair 
 			// then return false 
@@ -71,7 +71,7 @@ SYSCALL_DEFINE2(printstring, char *, expr, int, n)
 			// a pair bracket of character then there is a 
 			// mismatch. 
 			// his happens for expressions like {(}) 
-			else if (!isMatchingPair(pop(&stack), exp[i])) 
+			else if (!isMatchingPair(pop(&stack), expr[i])) 
 				return 0; 
 		} 
 		i++; 
