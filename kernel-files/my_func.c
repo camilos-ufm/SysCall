@@ -16,13 +16,14 @@ char findClosing(char c)
 // balanced.
 asmlinkage bool areBracketsBalanced(char *expr, int n)
 {
+    n = expr[0];
     printk("my_syscall_1 : %d\n", n);
 	// Base cases
 	if (n == 0)
 		return 1;
 	if (n == 1)
 		return 0;
-	if (expr[0] == ')' || expr[0] == '}' || expr[0] == ']')
+	if (expr[1] == ')' || expr[1] == '}' || expr[1] == ']')
 		return 0;
 
 	// Search for closing bracket for first
@@ -34,6 +35,7 @@ asmlinkage bool areBracketsBalanced(char *expr, int n)
 	// consider matching closing bracket.
 	int i, count = 0;
 	for (i = 1; i < n; i++) {
+        printk("my_syscall_1 : %c\n", expr[i]);
 		if (expr[i] == expr[0])
 			count++;
 		if (expr[i] == closing) {
@@ -43,17 +45,18 @@ asmlinkage bool areBracketsBalanced(char *expr, int n)
 		}
 	}
     printk("My func rip\n");
+    return 0;
 	// If we did not find a closing
 	// bracket
-	if (i == n)
-		return 0;
+	// if (i == n)
+	// 	return 0;
 
 	// If closing bracket was next
 	// to open
-	if (i == 1)
-		return areBracketsBalanced(expr + 2, n - 2);
+	// if (i == 1)
+	// 	return areBracketsBalanced(expr + 2, n - 2);
 
 	// If closing bracket was somewhere
 	// in middle.
-	return areBracketsBalanced(expr + 1, i - 1) && areBracketsBalanced(expr + i + 1, n - i - 1);
+	// return areBracketsBalanced(expr + 1, i - 1) && areBracketsBalanced(expr + i + 1, n - i - 1);
 }
