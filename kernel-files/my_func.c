@@ -22,6 +22,7 @@ asmlinkage bool areBracketsBalanced(char *expr, int n)
     for (i = 1; i < n; i++) {
         printk("my_syscall_1 : %c\n", expr[i]);
     }
+    return 0;
     // n = expr[0];
     // printk("my_syscall_1 : %d\n", n);
 	// // Base cases
