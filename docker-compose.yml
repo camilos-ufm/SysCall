@@ -7,4 +7,3 @@ services:
     volumes:
       - ./linux-4.17.4:/usr/src/mysql/linux-4.17.4
       - ./program-files:/program-files
-    container_name: syscall
