@@ -2,12 +2,18 @@
 #include <linux/kernel.h>
 #include <sys/syscall.h>
 #include <unistd.h>
+#include <string.h>
+
 int main()
 {
-    char exp[10] = "()"; 
+    char exp[256] = "()"; 
+    printf( "Enter an expression : ");
+    scanf("%s", exp);
 
+    printf( "\nYou entered: %s", exp);
+    printf( "\nLength: %d", strlen(exp));
     // Function call 
-    if (syscall(333,&exp[0], 2)) 
+    if (syscall(333,&exp[0], strlen(exp))) 
         printf("Balanced \n"); 
     else
         printf("Not Balanced \n"); 
