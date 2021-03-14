@@ -14,9 +14,9 @@ int main()
     printf( "\nLength: %d", strlen(exp));
     // Function call 
     if (syscall(333,&exp[0], strlen(exp))) 
-        printf("Balanced \n"); 
+        printf("\nBalanced \n"); 
     else
-        printf("Not Balanced \n"); 
+        printf("\nNot Balanced \n"); 
     long int xd = syscall(548);
     printf("System call sys_hello returned %ld\n", xd);
 
