@@ -10,7 +10,16 @@ sudo docker-compose run syscall bash
 
 ## Mapa conceptual, ¿cómo funciona una System Call?
 
- [image]
+ <img src="./src/diagram.jpeg"
+     alt="diagram"/>
+
+1. La aplicación que corre dentro del userspace configura los parámetros y llama a la syscall número 333.
+
+2. Después, se ejecuta la instrucción de llamada a las syscall, misma que causa una excepción: el procesador salta a una nueva dirección y comienza a ejectur el código que ahí se encuentra.
+
+3. Estas instrucciones guardan el estado actual de la aplicación, buscan en la tabla de syscalls cuál es la que se está llamando y se ejectua el código. Se llama a esta función en el kernel, regresa el estado anteior de la aplicación y regresa el control de nuevo al usuario.
+
+Referencia <a href="https://tldp.org/LDP/khg/HyperNews/get/syscall/syscall86.html">aquí</a>
 
 ## Pasos para la creación del proyecto
 
@@ -35,6 +44,8 @@ sudo docker-compose run syscall bash
 10. Compilamos el kernel haciendo uso del comando: sudo make, dentro de la carpeta linux-4.17.4/
 
 11. Instalamos el kernel ya compilado a la máquina. Reinicio y posterior prueba de la llamada a la función utilizando el número 333 y mandando los parámetros correspondientes.
+
+12. Creamos un contenedor utilizando docker y docker-compose, en donde hicimos un volumen para hacer uso del código que llama a la syscall.
 
 ## Resultado final
 
