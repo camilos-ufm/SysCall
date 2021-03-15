@@ -15,7 +15,7 @@ sudo docker-compose run syscall bash
 
 1. La aplicación que corre dentro del userspace configura los parámetros y llama a la syscall número 333.
 
-2. Después, se ejecuta la instrucción de llamada a las syscall, misma que causa una excepción: el procesador salta a una nueva dirección y comienza a ejectur el código que ahí se encuentra.
+2. Después, se ejecuta la instrucción de llamada a las syscall, misma que causa una excepción: el procesador salta a una nueva dirección y comienza a ejecutar el código que ahí se encuentra.
 
 3. Estas instrucciones guardan el estado actual de la aplicación, buscan en la tabla de syscalls cuál es la que se está llamando y se ejectua el código. Se llama a esta función en el kernel, regresa el estado anteior de la aplicación y regresa el control de nuevo al usuario.
 
