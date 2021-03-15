@@ -3,9 +3,10 @@ Syscall project
 
 ## Comando para correrlo
 
-'''
-    sudo docker-compose run syscall bash
-'''
+```bash
+sudo docker-compose run syscall bash
+```
+    
 
 ## Mapa conceptual, ¿cómo funciona una System Call?
 
