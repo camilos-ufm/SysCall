@@ -15,7 +15,7 @@ Syscall project
 
 ### 1. 
 
-Descargamos una imagen de Ubuntu Linux, la versión 16.06 LTS <a href="https://releases.ubuntu.com/16.04/">disponible aquí<a>
+Descargamos una imagen de Ubuntu Linux, la versión 16.06 LTS <a target="_blank" href="https://releases.ubuntu.com/16.04/">disponible aquí<a>
 
 ### 2.
 
