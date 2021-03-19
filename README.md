@@ -51,5 +51,3 @@ Referencia <a href="https://tldp.org/LDP/khg/HyperNews/get/syscall/syscall86.htm
 
 <img src="./src/final.png"
      alt="final result"/>
-
-rip rip rip
