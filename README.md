@@ -33,7 +33,7 @@ Referencia <a href="https://tldp.org/LDP/khg/HyperNews/get/syscall/syscall86.htm
 
 5. Esto nos crea una carpeta llamada linux-4.17.4/ en donde desarrollamos el código con la implementación del algoritmo para validar si una expresión está bien escrita o no, utilizando método para hacer uso del stack en modo kernel: kmalloc (utiliza una bandera) y kfree. 
 
-6. Para escribir el código y recibir parámetros desde el userspace, utilizamos un macro. SYSTEM_DEFINEN.
+6. Para escribir el código y recibir parámetros desde el userspace, utilizamos un macro. SYSTEM_DEFINEn.
 
 7. Después de escribir el código, creamos un Makefile dentro de la carpeta para definir el archivo .objeto de nuestro código.
 
