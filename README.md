@@ -17,13 +17,13 @@ sudo docker-compose run syscall bash
 
 2. Después, se ejecuta la instrucción de llamada a las syscall, misma que causa una excepción: el procesador salta a una nueva dirección y comienza a ejecutar el código que ahí se encuentra.
 
-3. Estas instrucciones guardan el estado actual de la aplicación, buscan en la tabla de syscalls cuál es la que se está llamando y se ejectua el código. Se llama a esta función en el kernel, regresa el estado anteior de la aplicación y regresa el control de nuevo al usuario.
+3. Estas instrucciones guardan el estado actual de la aplicación, buscan en la tabla de syscalls cuál es la que se está llamando y se ejectua el código. Se llama a esta función en el kernel, regresa el estado anterior de la aplicación y regresa el control de nuevo al usuario.
 
 Referencia <a href="https://tldp.org/LDP/khg/HyperNews/get/syscall/syscall86.html">aquí</a>
 
 ## Pasos para la creación del proyecto
 
-1. Descargamos una imagen de Ubuntu Linux, la versión 16.06 LTS <a target="_blank" href="https://releases.ubuntu.com/16.04/">disponible aquí<a>
+1. Descargamos una imagen de Ubuntu Linux, la versión 16.04 LTS <a target="_blank" href="https://releases.ubuntu.com/16.04/">disponible aquí<a>
 
 2. Creamos una máquina virtual a partir de esta imagen. Esta virtualización fue hecha en Virtual Box.
 
